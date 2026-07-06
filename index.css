@@ -4,12 +4,13 @@
 }
 
 body {
+  margin: 0;
+  min-height: 100vh;
   background-image: url('n4.jpg');
-  background-repeat: no-repeat; 
-  /* center and cover are common companions */ 
-  background-position: center top;   /* or center center, left top, etc. */ 
-  background-size: cover;           /* scale to cover the viewport */ 
-  background-attachment: fixed;     /* optional: fixes image during scroll */ 
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .wrapper {
@@ -29,12 +30,15 @@ body {
   gap: 1rem;
   opacity: 0.7;
   border-radius: 25px;
-  padding: 40px;               /* reduced so content fits in fixed size */
+  padding: 30px;
   background-color: rgb(216, 188, 209);
-  width: 700px;                /* fixed width */
-  height: 550px;               /* fixed height */
-  box-sizing: border-box;      /* include padding in width/height */
-  overflow: hidden;            /* prevents size changes from overflowing */
+  width: min(95vw, 700px);
+  max-width: 700px;
+  height: auto;
+  min-height: 500px;
+  max-height: 90vh;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* center inner changing content and keep it filling the same space */
@@ -54,10 +58,10 @@ body {
 }
 
 .heading{
-    height: -50px;
+    height: auto;
     color: #87126f;
     font-family: 'pixel';
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 900;
     font-weight: strong;
     text-transform: uppercase;
@@ -93,6 +97,7 @@ body {
 }
 
 .button-56 {
+  width: fit-content;
   margin: 0 auto;      /* horizontally center if it becomes block-level */
   max-width: none;     /* allow intrinsic width so centering works */
   align-items: center;
@@ -158,5 +163,31 @@ body {
   margin:0 0 1rem 0;
   font-weight: bold;
   
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 20px;
+  }
+
+  .box {
+    padding: 18px;
+    gap: 0.75rem;
+    min-height: 420px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .feelings {
+    font-size: 1rem;
+  }
+
+  .button-56 {
+    font-size: 14px;
+    height: 44px;
+    padding: 0 18px;
+  }
 }
 
