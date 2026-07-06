@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div class="wrapper">
+  <div class="box">
+    <div class="content">
+      <h1 class="heading">HAPPY BIRTHDAY VIJAYESWARI</h1>
+
+      <audio src="aol.mp3" id="Audio" autoplay loop></audio>
+      <button class="button-56" id="startBtn" role="button" onclick="startAndSwap()">Click here to start!</button>
+
+      <!-- new text that appears after click (container keeps box size) -->
+      <div id="message" style="text-align:center; margin-top:1rem;">
+        <p class="feelings" >
+          Dear Viju,
+          <br><br> I don't know what to say that I have not already told you many times, however affection
+          should be expressed in abundance. So once again, I would like to echo that you are the most 
+          amazing person I have met whom I never expected to befriend in my early teens, but now all I 
+          can say is that I am glad that after everything, I have you in my life. <br> <br>I am honoured to see you
+          grow and prosper, and I await many more of your dreams and aspirations to come alive. Have an 
+          amazing birthday my dear friend and stay blessed always.
+
+          <br><br>Keep swimming!
+          <br>Swati
+        </p>
+        <button class="button-56" id="backBtn" onclick="revertSwap()">Go back</button>
+      </div>
+    </div>
+
+    <script>
+      function startAndSwap(){
+        var audio = document.getElementById("Audio");
+        if(audio.paused) audio.play();
+        document.querySelector('.heading').style.display = 'none';
+        document.getElementById('startBtn').style.display = 'none';
+        document.getElementById('message').style.display = 'block';
+      }
+      function revertSwap(){
+        document.querySelector('.heading').style.display = '';
+        document.getElementById('startBtn').style.display = '';
+        document.getElementById('message').style.display = 'none';
+      }
+    </script>
+  </div>
+</div>
+
+</body>
+</html>

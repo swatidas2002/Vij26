@@ -1,0 +1,162 @@
+@font-face {
+    font-family: pixel;
+    src: url('PixelatedEleganceRegular-ovawB.ttf');
+}
+
+body {
+  background-image: url('n4.jpg');
+  background-repeat: no-repeat; 
+  /* center and cover are common companions */ 
+  background-position: center top;   /* or center center, left top, etc. */ 
+  background-size: cover;           /* scale to cover the viewport */ 
+  background-attachment: fixed;     /* optional: fixes image during scroll */ 
+}
+
+.wrapper {
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* fixed box size (box-sizing keeps padding inside size) */
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  opacity: 0.7;
+  border-radius: 25px;
+  padding: 40px;               /* reduced so content fits in fixed size */
+  background-color: rgb(216, 188, 209);
+  width: 700px;                /* fixed width */
+  height: 550px;               /* fixed height */
+  box-sizing: border-box;      /* include padding in width/height */
+  overflow: hidden;            /* prevents size changes from overflowing */
+}
+
+/* center inner changing content and keep it filling the same space */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* ensure message uses same visual spacing */
+#message {
+  display: none;
+  width: 100%;
+}
+
+.heading{
+    height: -50px;
+    color: #87126f;
+    font-family: 'pixel';
+    font-size: 3rem;
+    font-weight: 900;
+    font-weight: strong;
+    text-transform: uppercase;
+    animation: shimmer 5s linear infinite;
+
+/* Create a multi-colored, sparkly gradient */
+  background: linear-gradient(
+    90deg, 
+    #87126f, #ffb3c1, #b7185c, #f11b69, #ffffff, #c9184a
+  );
+  
+  /* Scale up the background width so it has room to move */
+  background-size: 200% auto;
+  
+  /* Clip the background to the text boundary and hide the base text color */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  
+  /* Apply the animation loop */
+  animation: shine 5s linear infinite;
+}
+
+/* Move the background position to simulate sparkling light movement */
+@keyframes shine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.button-56 {
+  margin: 0 auto;      /* horizontally center if it becomes block-level */
+  max-width: none;     /* allow intrinsic width so centering works */
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+.feelings{
+  text-align: justify;
+  font-size:1.5rem; 
+  color:#2c032a; 
+  margin:0 0 1rem 0;
+  font-weight: bold;
+  
+}
+
