@@ -183,10 +183,6 @@ body {
     font-size: 1rem;
   }
 
-  #after {
-    font-size: 1rem;
-  }
-
   .button-56 {
     font-size: 14px;
     height: 44px;
@@ -194,10 +190,4 @@ body {
   }
 }
 
-#after{
-  text-align: right;
-  font-size:1.5rem; 
-  color:#2c032a; 
-  margin:0 0 1rem 0;
-  font-weight: bold;
-}
+
